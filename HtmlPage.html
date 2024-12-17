@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+    <title>Virtual Safekeep login</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="JavaScript.js"></script>
+</head>
+<body>
+    <div class="main">
+        <h1>Virtual Safekeep</h1>
+        <h3>Enter your credentials</h3>
+
+        <form id="login">
+            <label for="username">Username: </label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required />
+            <label for="password"></label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required />
+            <button type="submit" onclick="change_content('home')">Login</button>
+        </form>
+
+        <p>
+            Not registered? 
+            <a href="#">Create an account</a>
+        </p>
+    </div>
+    <div id="content"></div>
+</body>
+</html>
