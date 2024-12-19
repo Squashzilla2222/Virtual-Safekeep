@@ -22,6 +22,8 @@
 }
 
 document.getElementById("login").addEventListener("submit", function (event) {
-    event.preventDefault();
+    event.preventDefault(); // Prevents form from reloading
+    document.querySelector(".main").style.display = "none"; // Hide login
+    document.getElementById("content").style.display = "block";
     change_content("home");
 });

@@ -1,6 +1,5 @@
 ﻿/*style.css*/
 body {
-    display: flex;
     align-items: center;
     justify-content: center;
     line-height: 1.5;
@@ -20,7 +19,6 @@ body {
 }
 
 label {
-    display: block;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -29,7 +27,6 @@ label {
 }
 
 input {
-    display: block;
     width: 100%;
     margin-bottom: 15px;
     padding: 10px;
@@ -46,10 +43,4 @@ button {
     border: none;
     cursor: pointer;
     width: 100%;
-}
-
-.wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
