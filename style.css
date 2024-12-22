@@ -1,9 +1,12 @@
 ﻿/*style.css*/
 body {
+    display: flex;
     align-items: center;
     justify-content: center;
+    font-family: sans-serif;
     line-height: 1.5;
     min-height: 100vh;
+    background: #f3f3f3;
     flex-direction: column;
     margin: 0;
 }
@@ -19,6 +22,7 @@ body {
 }
 
 label {
+    display: block;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -27,6 +31,7 @@ label {
 }
 
 input {
+    display: block;
     width: 100%;
     margin-bottom: 15px;
     padding: 10px;
@@ -43,4 +48,5 @@ button {
     border: none;
     cursor: pointer;
     width: 100%;
+    font-size: 16px;
 }
