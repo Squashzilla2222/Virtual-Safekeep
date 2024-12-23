@@ -11,12 +11,11 @@ body {
     font-family: sans-serif;
     line-height: 1.5;
     min-height: 100vh;
-    background: #f3f3f3;
     flex-direction: column;
     margin: 0;
 }
 
-.main {
+login_page {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -55,3 +54,4 @@ button {
     width: 100%;
     font-size: 16px;
 }
+
