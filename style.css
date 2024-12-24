@@ -1,5 +1,5 @@
 ﻿ /*style.css*/
-html, body{
+html, body {
     height: 100%;
     margin: 0;
 }
@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     margin: 0;
+    background-color: #fff
 }
 
 login_page {
@@ -51,7 +52,20 @@ button {
     margin-bottom: 15px;
     border: none;
     cursor: pointer;
-    width: 100%;
     font-size: 16px;
 }
+.full_width{
+    width: 100%
+}
 
+.quit_button{
+   position: absolute;
+   top: 8px;
+   right: 16px;
+}
+
+.home_button{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
