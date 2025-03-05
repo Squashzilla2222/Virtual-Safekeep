@@ -1,4 +1,4 @@
-﻿ /*style.css*/
+﻿/*style.css*/
 html, body {
     height: 100%;
     margin: 0;
@@ -16,7 +16,7 @@ body {
     background-color: #fff
 }
 
-login_page {
+#login_page {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -54,18 +54,30 @@ button {
     cursor: pointer;
     font-size: 16px;
 }
-.full_width{
+
+.full_width {
     width: 100%
 }
 
-.quit_button{
-   position: absolute;
-   top: 8px;
-   right: 16px;
+.quit_button {
+    position: absolute;
+    top: 8px;
+    right: 16px;
 }
 
-.home_button{
+.home_button {
     position: absolute;
     top: 8px;
     left: 16px;
+}
+
+/* This will split the page into columns that present information neatly */
+.column_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.column{
+    flex: 1;
 }

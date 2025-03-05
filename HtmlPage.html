@@ -32,20 +32,25 @@
         <button class="quit_button" onclick="quit()">Quit</button>
     </div>
     <div id="manage_accounts" style="display:none">
-        <h1>Welcome to the account management page!</h1>
         <button class="home_button" onclick="back_to_home()">Return to home page</button>
-
-        <table id="JSON_table" border="1">
-            <thead>
-                <tr>
-                    <th>Username</th>
-                    <th>Password</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- JSON data will be inserted here automatically -->
-            </tbody>
-        </table>
+        <div class="column_container">
+            <div class="column">
+                <h1>Welcome to the account management page!</h1>
+            </div>
+            <div class="column">
+                <table id="JSON_table" border="1">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Password</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JSON data will be inserted here automatically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
     </div>
     <div id="password_tester" style="display:none">
