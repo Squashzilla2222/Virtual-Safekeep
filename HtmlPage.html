@@ -39,7 +39,7 @@
                     <label for="new_username">Username: </label>
                     <input type="text" id="new_username" name="username" placeholder="Enter new username" required />
                     <label for="new_password">Password: </label>
-                    <input  type="password" id="new_password" name="password" placeholder="Enter new password" required />
+                    <input type="password" id="new_password" name="password" placeholder="Enter new password" required />
                     <button class="full_width" type="submit">Add account</button>
                 </form>
             </div>
@@ -60,12 +60,22 @@
 
     </div>
     <div id="password_tester" style="display:none">
-        <h1>Password strength tester</h1>
         <button class="home_button" onclick="back_to_home()">Return to home page</button>
+        <div class="column_container">
+            <div class="column">
+                <h1>Password strength tester</h1>
+            </div>
+            <div class="column">
+                <label>Password tester</label>
+                <input id="password_tester" placeholder="Enter password"/>
+                <button type="submit">Test password</button>
+            </div>
+        </div>
     </div>
     <div id="account_options" style="display:none">
         <h1>Account options</h1>
         <button class="home_button" onclick="back_to_home()">Return to home page</button>
     </div>
+    
 </body>
 </html>
