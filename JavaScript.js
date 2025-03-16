@@ -23,6 +23,8 @@ function password_strength() {
     var password_test = document.getElementById("password_tester")
     home.style.display = "none";
     password_test.style.display = "block";
+
+    password_strength_tester();
 }
 
 function account_options() {
@@ -96,4 +98,38 @@ function delete_account(index) {
     localStorage.setItem("jsonData", JSON.stringify(jsonData));
 
     render_table();
+}
+
+function password_strength_tester() {
+    let password = document.getElementById("password_input");
+    let strength = document.getElementById("password_feedback");
+
+    password.addEventListener("input", function () { // Anonymous function
+        let counter = 0; // Counter controls how full the bar is
+        let input = password.value; // Saves inputted password
+        let strength_bar = ["0%", "25%", "50%", "75%", "100%"]; // How full the strength bar can be
+        let bar_colour = ["#ff1100", "#ffa200", "#fff700", "#84ff00", "#0dff00"]; // strength bar colour
+
+        // If input is empty, set bar to 0
+        if (input.length === 0) {
+            counter = 0;
+            strength.style.width = "0%";
+            strength.style.backgroundColor = "#ababab"; // Base colour will be set to grey
+            return;
+        }
+
+        // Check the password length and then details
+        if (input.length >= 8) { // Only check passwords greater than 8 digits (anything lower is considered weak)
+            let password_specifications = [/[0-9]/, /[a-z]/, /[A-Z]/, /[^0-9a-zA-Z]/]; // Check for numbers, lower case, upper case, and special characters
+            password_specifications.forEach((item) => {
+                if (item.test(input)) {
+                    counter += 1;
+                }
+            });
+        }
+
+        // Update bar
+        strength.style.width = strength_bar[counter];
+        strength.style.backgroundColor = bar_colour[counter];
+    });
 }
