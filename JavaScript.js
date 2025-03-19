@@ -103,18 +103,21 @@ function delete_account(index) {
 function password_strength_tester() {
     let password = document.getElementById("password_input");
     let strength = document.getElementById("password_feedback");
+    let strength_label = document.getElementById("feedback_label");
 
     password.addEventListener("input", function () { // Anonymous function
         let counter = 0; // Counter controls how full the bar is
         let input = password.value; // Saves inputted password
-        let strength_bar = ["0%", "25%", "50%", "75%", "100%"]; // How full the strength bar can be
+        let strength_bar = ["1%", "25%", "50%", "75%", "100%"]; // How full the strength bar can be
         let bar_colour = ["#ff1100", "#ffa200", "#fff700", "#84ff00", "#0dff00"]; // strength bar colour
+        let strength_text = ["Very Weak", "Weak", "Reasonable", "Strong", "Very strong"]; // text to match the strength bar
 
         // If input is empty, set bar to 0
         if (input.length === 0) {
             counter = 0;
-            strength.style.width = "0%";
+            strength.style.width = "1%";
             strength.style.backgroundColor = "#ababab"; // Base colour will be set to grey
+            strength_label.textContent = ""; // Clear text
             return;
         }
 
@@ -131,5 +134,8 @@ function password_strength_tester() {
         // Update bar
         strength.style.width = strength_bar[counter];
         strength.style.backgroundColor = bar_colour[counter];
+
+        // Update text
+        strength_label.textContent = strength_text[counter];
     });
 }
