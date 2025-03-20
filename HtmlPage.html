@@ -21,9 +21,20 @@
 
         <p>
             Not registered?
-            <a href="#">Create an account</a>
+            <a href="#" onclick="registration()">Create an account</a>
         </p>
     </div>
+
+    <!-- Registration page -->
+    <div id="Registration" style="display:none">
+        <form id="register" onsubmit="register(event)">
+            <label for="details">Create your account: </label>
+            <input type="text" id="reg_username" name="reg_username" placeholder="Enter a username" required />
+            <input type="password" id="reg_password" name="reg_password" placeholder="Enter a password" required />
+            <button class="full_width" type="submit">Register</button>
+        </form>
+    </div>
+
     <!-- Home page -->
     <div id="home" style="display:none">
         <h1>Welcome to the home page!</h1>

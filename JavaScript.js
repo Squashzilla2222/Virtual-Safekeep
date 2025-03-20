@@ -31,6 +31,39 @@ function login(event) {
     }
 }
 
+function registration() {
+    var login_page = document.getElementById("login_page");
+    var registration_page = document.getElementById("Registration");
+    login_page.style.display = "none";
+    registration_page.style.display = "block";
+}
+
+function register(event) {
+    event.preventDefault();
+    const username = document.getElementById("reg_username").value;
+    const password = document.getElementById("reg_password").value;
+
+    // Check if username is already taken
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    let unavailable_user = users.find(user => user.username === username);
+    if (unavailable_user) {
+        alert("Username is unavailable, please choose another");
+        return;
+    }
+
+    users.push({ username: username, password: password });
+    localStorage.setItem("users", JSON.stringify(users));
+    alert("Account created");
+    return_to_login();
+}
+
+function return_to_login() {
+    var registration_page = document.getElementById("Registration");
+    var login_page = document.getElementById("login_page");
+    registration_page.style.display = "none";
+    login_page.style.display = "block";
+}
+
 function manage_accounts() {
     var home = document.getElementById("home");
     var manage_acc = document.getElementById("manage_accounts")
