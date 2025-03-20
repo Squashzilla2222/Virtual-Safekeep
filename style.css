@@ -1,4 +1,4 @@
-﻿/*style.css*/
+﻿/* style.css */
 html, body {
     height: 100%;
     margin: 0;
@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     margin: 0;
-    background-color: #fff
+    transition: background-color 0.5s ease;
 }
 
 #login_page {

@@ -197,6 +197,20 @@ function password_strength_tester() {
     });
 }
 
+function toggle_colour() {
+    let current_background = window.getComputedStyle(document.body).backgroundColor;
+    
+    if (current_background === "rgb(204, 255, 255)") {
+        document.body.style.backgroundColor = "#ffffff";
+        document.querySelectorAll("button").forEach(button => button.style.backgroundColor = "#f0f0f0");
+        document.querySelectorAll("input").forEach(input => input.style.backgroundColor = "#ffffff");
+    } else {
+        document.body.style.backgroundColor = "#ccffff";
+        document.querySelectorAll("button").forEach(button => button.style.backgroundColor = "b3ffff");
+        document.querySelectorAll("input").forEach(input => input.style.backgroundColor = "#ccffff");
+    }
+}
+
 function delete_user_account() {
     const username = document.getElementById("username").value;
     let users = JSON.parse(localStorage.getItem("users")) || [];
@@ -212,6 +226,5 @@ function delete_user_account() {
         alert("Error deleting account");
     }
 
-    
-}
 
+}
