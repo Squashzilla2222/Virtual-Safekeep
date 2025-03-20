@@ -1,12 +1,34 @@
-﻿let jsonData = JSON.parse(localStorage.getItem("jsonData")) || [{ Username: "Test@test.com", Password: "Test123" }]; // test
+﻿// Data used for testing
+let jsonData = JSON.parse(localStorage.getItem("jsonData")) || [{ Username: "Test@test.com", Password: "Test123" }];
+function test_user() {
+    if (!localStorage.getItem("users")) {
+        let users = [
+            { username: "test_user@testing.com", password: "test_pword" },
+        ];
+        localStorage.setItem("users", JSON.stringify(users));
+    }
+}
 
-function login() {
+test_user();
+
+function login(event) {
     event.preventDefault(); // prevent login page form reloading
-    var login_page = document.getElementById("login_page");
-    var home = document.getElementById("home");
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-    login_page.style.display = "none"; // hide login
-    home.style.display = "block"; // show home page
+    let users = JSON.parse(localStorage.getItem("users")) || []; // Retrieve users from local storage
+
+    let valid_user = users.find(user => user.username === username && user.password === password);
+
+    if (valid_user) {
+        var login_page = document.getElementById("login_page");
+        var home = document.getElementById("home");
+
+        login_page.style.display = "none"; // hide login
+        home.style.display = "block"; // show home page
+    } else {
+        alert("Invalid username or password");
+    }
 }
 
 function manage_accounts() {

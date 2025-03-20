@@ -7,15 +7,16 @@
     <script src="JavaScript.js"></script>
 </head>
 <body>
+    <!-- Login page -->
     <div id="login_page">
         <h1>Virtual Safekeep</h1>
         <h3>Enter your credentials</h3>
 
-        <form id="login">
+        <form id="login" onsubmit="login(event)">
             <label for="details">Enter your details: </label>
             <input type="text" id="username" name="username" placeholder="Enter your username" required />
             <input type="password" id="password" name="password" placeholder="Enter your password" required />
-            <button class="full_width" type="submit" onclick="login()">Login</button>
+            <button class="full_width" type="submit">Login</button>
         </form>
 
         <p>
@@ -23,6 +24,7 @@
             <a href="#">Create an account</a>
         </p>
     </div>
+    <!-- Home page -->
     <div id="home" style="display:none">
         <h1>Welcome to the home page!</h1>
         <button class="full_width" onclick="manage_accounts()">Manage accounts</button>
@@ -30,6 +32,7 @@
         <button class="full_width" onclick="account_options()">Virtual Safekeep account options</button>
         <button class="quit_button" onclick="quit()">Quit</button>
     </div>
+    <!-- Manage accounts -->
     <div id="manage_accounts" style="display:none">
         <button class="home_button" onclick="back_to_home()">Return to home page</button>
         <div class="column_container">
@@ -57,8 +60,8 @@
                 </table>
             </div>
         </div>
-
     </div>
+    <!-- Password tester -->
     <div id="password_tester" style="display:none">
         <button class="home_button" onclick="back_to_home()">Return to home page</button>
         <div class="column_container">
@@ -75,6 +78,7 @@
             </div>
         </div>
     </div>
+    <!-- Account options -->
     <div id="account_options" style="display:none">
         <h1>Account options</h1>
         <button class="home_button" onclick="back_to_home()">Return to home page</button>
