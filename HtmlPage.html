@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" name="viewpoint" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Virtual Safekeep login</title>
     <link rel="stylesheet" href="style.css" />
     <script src="JavaScript.js"></script>
@@ -91,8 +91,17 @@
     </div>
     <!-- Account options -->
     <div id="account_options" style="display:none">
-        <h1>Account options</h1>
         <button class="home_button" onclick="back_to_home()">Return to home page</button>
+        <div class="column_container">
+            <div class="column">
+                <h1>Account options</h1>
+            </div>
+            <div class="column">
+                <h3>Delete account</h3>
+                <button class="full_width width" onclick="delete_user_account()">Delete account permanently</button>
+            </div>
+        </div>
+
     </div>
 
 </body>

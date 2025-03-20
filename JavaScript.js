@@ -59,8 +59,10 @@ function register(event) {
 
 function return_to_login() {
     var registration_page = document.getElementById("Registration");
+    var acc_options = document.getElementById("account_options")
     var login_page = document.getElementById("login_page");
     registration_page.style.display = "none";
+    acc_options.style.display = "none";
     login_page.style.display = "block";
 }
 
@@ -194,3 +196,22 @@ function password_strength_tester() {
         strength_label.textContent = strength_text[counter];
     });
 }
+
+function delete_user_account() {
+    const username = document.getElementById("username").value;
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    user_index = users.findIndex(user => user.username === username);
+
+    if (user_index !== -1) {
+        users.splice(user_index, 1);
+        localStorage.setItem("users", JSON.stringify(users));
+
+        alert("Account deleted");
+        return_to_login();
+    } else {
+        alert("Error deleting account");
+    }
+
+    
+}
+
