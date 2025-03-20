@@ -80,9 +80,10 @@ button {
 
 .column {
     flex: 1;
+    padding: 20px;
 }
 
-.password_feedback{
+.password_feedback {
     background-color: #fff;
     width: 100%;
     height: 20px !important;
@@ -90,7 +91,7 @@ button {
     margin-top: 10px;
 }
 
-#password_feedback{
+#password_feedback {
     height: 100%;
     width: 0%;
     transition: width 0.3s, background-color 0.3s;
