@@ -63,6 +63,8 @@ button {
     border: none;
     cursor: pointer;
     font-size: 16px;
+    background-color: #132fde;
+    color: #fff;
 }
 
 .full_width {
@@ -73,12 +75,16 @@ button {
     position: absolute;
     top: 8px;
     right: 16px;
+    background-color: #132fde;
+    color: #fff;
 }
 
 .home_button {
     position: absolute;
     top: 8px;
     left: 16px;
+    background-color: #132fde;
+    color: #fff;
 }
 
 /* This will split the page into columns that present information neatly */
