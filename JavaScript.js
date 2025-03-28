@@ -113,10 +113,12 @@ function render_table() {
 
     jsonData.forEach((item, index) => {
         const row = table_body.insertRow();
-        const username_cell = row.insertCell(0);
-        const password_cell = row.insertCell(1);
-        const actionCell = row.insertCell(2);
+        const company_cell = row.insertCell(0);
+        const username_cell = row.insertCell(1);
+        const password_cell = row.insertCell(2);
+        const actionCell = row.insertCell(3);
 
+        company_cell.textContent = item.Company;
         username_cell.textContent = item.Username;
         password_cell.textContent = item.Password;
 
@@ -131,16 +133,18 @@ function render_table() {
 function add_account(event) {
     event.preventDefault();
 
+    const new_company = document.getElementById("new_company").value;
     const new_username = document.getElementById("new_username").value;
     const new_password = document.getElementById("new_password").value;
 
     // Add new account to database
-    jsonData.push({ Username: new_username, Password: new_password });
+    jsonData.push({ Company: new_company, Username: new_username, Password: new_password });
 
     // Update localStorage
     localStorage.setItem("jsonData", JSON.stringify(jsonData));
 
     // Clear the form inputs
+    document.getElementById("new_company").value = "";
     document.getElementById("new_username").value = "";
     document.getElementById("new_password").value = "";
 

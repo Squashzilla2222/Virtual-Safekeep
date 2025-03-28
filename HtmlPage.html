@@ -4,7 +4,7 @@
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Virtual Safekeep login</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="logo/VS.png"/>
+    <link rel="icon" type="image/x-icon" href="logo/VS.png" />
     <script src="JavaScript.js"></script>
 </head>
 <body>
@@ -51,6 +51,8 @@
             <div class="column">
                 <h1>Welcome to the account management page!</h1>
                 <form id="add_account" onsubmit="add_account(event)">
+                    <label for="new_company">Company: </label>
+                    <input type="text" id="new_company" name="company" placeholder="Enter new company" required />
                     <label for="new_username">Username: </label>
                     <input type="text" id="new_username" name="username" placeholder="Enter new username" required />
                     <label for="new_password">Password: </label>
@@ -62,6 +64,7 @@
                 <table id="JSON_table" border="1">
                     <thead>
                         <tr>
+                            <th>Company</th>
                             <th>Username</th>
                             <th>Password</th>
                         </tr>
