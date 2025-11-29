@@ -7,3 +7,6 @@ for their accounts. The passwords are tested on their length and characters, and
 of how strong the password is. 
 Virtual Safekeep comes with dyslexia options and a fast exit/log out function for security.
 (COMP1004 assessment)
+
+
+Please ignore Salty Padel work - was added by accident
